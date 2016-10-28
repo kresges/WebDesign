@@ -1,0 +1,80 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+
+<head>
+  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="google" value="notranslate">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+
+  <title>Spencer Kresge</title>
+</head>
+
+<body>
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Spencer Kresge</a>
+        <a class="navbar-brand" href="/Algorithms">Algorithms</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+      </div>
+    </div>
+  </nav>
+
+<!--
+<div class="jumbotron">
+<div class="container">
+<title>repl.it</title>
+  <div id="constatus"></div>
+  <input id="code" type="text" name="code" value="" />
+  <button id="run">run</button>
+  <pre id="result" class="result">results: </pre>
+  <pre id="output" class="output">output: </pre>
+</div>
+</div>
+-->
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>Python Function Runtime Analysis</h1>
+  </div>
+</div>
+<div id="editor">print "Hello World!"</div>
+<button id="run" class="btn btn-default center-block">run</button>
+  <pre id="result" class="result">results: </pre>
+  <pre id="output" class="output">output: </pre>
+  <div id="graph" class="graph"></div>
+    <hr>
+
+    <footer>
+      <p>&copy; Spencer Kresge</p>
+    </footer>
+  </div> <!-- /container -->
+
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <!-- This script loads library for repl.it so that python can be evaluated client side -->
+  <script src="https://repl.it/lib/api.js"></script>
+  <!-- This is a script for all jquery and client server interaction, including passing data in and out of repl.it -->
+  <script src="client/client.js"></script>
+  <!-- This is script for loading localy sourced ace editor -->
+  <script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script> 
+  <!-- This is script for configuring ace-editor -->
+  <script src="client/ace-editor.js"></script>
+  <!-- load the d3.js library -->    
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="/client/D3-graph.js"></script>
+</body>
+</html>
