@@ -1,8 +1,14 @@
-//May expire every five days, consider writing token generator.
-TOKEN   = { time_created: 1477556963000,
-  msg_mac: '0noZfAvFe63IpJj6kX9pXChrE2JE299vPJpBUK5e5vI=' }
+var repl = null
+var TOKEN   = {}
 
-var repl = new ReplitClient('api.repl.it', '80', 'python', TOKEN);
+//This is executed every time the page loads in order 
+//to ensure that a current token is available.
+$.get('/token',function(data){
+    TOKEN = { time_created: data[0],
+              msg_mac: data[1]
+            }
+    repl = new ReplitClient('api.repl.it', '80', 'python', TOKEN);
+    });
 
 $('#run').click(function(){
 	console.log("Run: /execute");
@@ -47,8 +53,3 @@ function start(){
             }
         );
 }
-
-//Could be used in the future as example of how to author get requests to server using jquery
-//$.get('/execute',function(data){
-//  console.log(data);
-//});
